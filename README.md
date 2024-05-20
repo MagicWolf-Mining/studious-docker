@@ -48,17 +48,22 @@ Add the Docker repository to your system's software sources list:
 
 		sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-5. Update Package Index Again:
+
+optional link use with step 3 optional cmd
+
+		echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee -a /etc/apt/sources.list.d/docker.list
+
+6. Update Package Index Again:
 Update the package index once more to ensure apt is aware of the Docker packages now available from the newly added repository:
 
 		sudo apt update
 
-6. Install Docker Engine:
+7. Install Docker Engine:
 Install the latest version of Docker Engine:
 
 		sudo apt install docker-ce
 
-7. Verify Docker Installation:
+8. Verify Docker Installation:
 Check that Docker has been installed correctly by running the following command, which should output the installed version:
 
 		docker --version
