@@ -101,7 +101,38 @@ Disabling the service is as straightforward as using the following command.
 
 Systemctl keeps track of all services running on your Ubuntu system. This allows you to see whether the software is currently running or crashed.
 
+		sudo systemctl status docker
+
+
+Install Docker Compose
+
+
+To install Docker Compose on Ubuntu, you can follow these steps:
+
+1. Download Docker Compose Binary:
+First, you need to download the Docker Compose binary into your system's PATH. You can replace version_number with the version you want to install.
+To find the latest release, visit the Docker Compose GitHub releases page.
+
 To check the status of Docker on your Ubuntu system, you can use the following command within the terminal.
 
-		sudo systemctl status docker
+		sudo curl -L "https://github.com/docker/compose/releases/download/version_number/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+2. Add Execute Permissions:
+Make the downloaded binary executable:
+
+		sudo chmod +x /usr/local/bin/docker-compose
+
+4. Verify Installation:
+Check that Docker Compose has been installed correctly by running:
+
+		docker-compose --version
+
+This command should output the installed version of Docker Compose.
+
+That's it! Docker Compose should now be installed on your Ubuntu system and ready to use. You can start using Docker Compose to define and run multi-container Docker applications.
+
+
+
+
+		
 
