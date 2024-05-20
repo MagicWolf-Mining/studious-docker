@@ -133,6 +133,13 @@ That's it! Docker Compose should now be installed on your Ubuntu system and read
 
 
 
+Cleaning Up
+If you need to uninstall Docker, run the following
+
+		sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+
+
+
 
 		
 
